@@ -36,7 +36,7 @@ export class UnsplashService {
           color: photo.color,
           likes: photo.likes,
           user: photo.user.username,
-          fullImage: photo.urls.thumb
+          fullImage: photo.urls.full
         };
         return p;
       });

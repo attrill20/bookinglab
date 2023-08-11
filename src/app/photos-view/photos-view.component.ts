@@ -26,7 +26,7 @@ export class PhotosViewComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private unpslash: UnsplashService,
+    private unsplash: UnsplashService,
     private dataStore: DataStoreService
   ) { }
 
@@ -44,7 +44,7 @@ export class PhotosViewComponent implements OnInit {
    */
   async setup() {
     try {
-      const photos = await this.unpslash.getPhotos();
+      const photos = await this.unsplash.getPhotos();
       console.log('Got photos', photos);
       this.photos = photos;
     }
